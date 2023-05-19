@@ -7,7 +7,7 @@ const jwt=require("jsonwebtoken");
 
 
 const registeradmin=asyncHandler(async(req,res)=>{
-    const {name,email,password,Mobile,position}=req.body;
+    const {name,email,password}=req.body;
 
     const adminExists=await admin.findOne({email});
    
@@ -20,8 +20,6 @@ const registeradmin=asyncHandler(async(req,res)=>{
         name,
         email,
         password,
-        Mobile,
-        position,
     });
 
         if(admin){
@@ -30,8 +28,6 @@ const registeradmin=asyncHandler(async(req,res)=>{
                 name:Admin.name,
                 email:Admin.email,
                 password:Admin.password,
-                Mobile:Admin.Mobile,
-                position:Admin.position,
                 token:generateToken(Admin._id),
             });
         }else{

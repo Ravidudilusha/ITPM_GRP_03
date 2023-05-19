@@ -17,14 +17,6 @@ const adminSchema = new Schema({
         type: String,
         required:true
     },
-    Mobile:{
-        type: String,
-        required:true
-    },
-    position:{
-        type: String,
-        required:true
-    },
 
 
 })
