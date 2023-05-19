@@ -1,6 +1,14 @@
 import React, { Component } from 'react'
 import axios from "axios";
 import Header from './Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import image from '../components/R.jpg';
+
+
 
 export default class AllStaff extends Component{
 
@@ -8,64 +16,53 @@ constructor(props){
     super(props);
 
     this.state={
-       staff:[]
+       article:[]
     };
 }
 
 componentDidMount(){
-    this.retrieveStaff();
+    this.retrieveArticle();
 }
 
-retrieveStaff(){
+retrieveArticle(){
     axios.get("http://localhost:8080/get").then(res =>{
             if(res.data.success){
             this.setState({
-                staff:res.data.existingStaff
+                article:res.data.existingArticle
             });
 
-            console.log(this.state.staff)
+            console.log(this.state.article)
         }
     })
 }
 onDelete= (id)=>{
     axios.delete(`http://localhost:8080/delete/${id}`).then((res)=>{
         alert("Delete Successfully");
-        this.retrieveStaff();
+        this.retrieveArticle();
     })
 }
     render(){
         return(
+          <div className="container">
+          <Header/>
+                <Row xs={1} md={5} className="p-3 col-12 g-4">
+                  {this.state.article.map((article) => (
+                    <Col>
+                      <Card>
+                        <Card.Img variant="top" src={image} />
+                        <Card.Body>
+                          <Card.Title>{article.topic}</Card.Title>
+                          <Card.Text>
+                          <Link to={"/get/"+ article._id} className = "btn btn-warning">see more</Link>
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+                  ))}
+                </Row>
+                </div>
+              );                    
             
-            <div className='container'>
-                <Header/>
-                <h2>All Staff</h2>
-                <table className='table'>
-                    <thead>
-                        <tr>
-                        <th scope='col'>#</th>
-                            <th scope='col'>name</th>
-                            <th scope='col'>email</th>
-                            <th scope='col'>Mobile</th>
-                            <th scope='col'>position</th>
-                         </tr>
-                    </thead>
-                    <tbody>
-                    {this.state.staff.map((staff,index) =>(
-                        <tr>
-                            <th scope='row'>{index+1}</th>
-                            <td>{staff.name}</td>
-                            <td>{staff.email}</td>
-                            <td>{staff.Mobile}</td>
-                            <td>{staff.position}</td>
-                            <td>
-                            </td>
-                             </tr>
-                             ))}
-                    </tbody>
-                </table>
-              </div>                     
-            
-        )
     }
 }
 

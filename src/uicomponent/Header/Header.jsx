@@ -11,19 +11,19 @@ import "../../styles/header.css";
 
 const nav__links = [
   {
-    display: 'Home',
+    display: 'Article',
     path: '/homeui',
   },
   {
-    display: 'All-Foods',
+    display: 'Volunteer and Donation',
     path: '/foodsui',
   },
   {
-    display: 'Cart',
+    display: 'Q & A',
     path: '/cartui',
   },
   {
-    display: 'Contact',
+    display: 'Underwater Areas',
     path: '/contactui',
   },
 ];
@@ -61,7 +61,7 @@ const Header = () => {
         <div className="nav__wrapper d-flex align-items-center justify-content-between">
           <div className="logo">
             <img src={logo} alt="logo" />
-            <h5>Supermarket</h5>
+            <h5>Ocean Alives</h5>
           </div>
 
           {/* ======= menu ======= */}
@@ -83,11 +83,7 @@ const Header = () => {
           </div>
 
           {/*========nav right icon*/}
-          <div className="nav_right d-flex align-items-center gap-3">
-            <span className="cart_icon" onClick={toggleCart}>
-            <i class="ri-shopping-basket-line"></i>
-            <span className="cart_badge">{totalQuantity}</span>
-            </span>
+          <div className="nav_right d-flex align-items-center gap-5">
             <span className="user">
               <Link to='/loginui'><i class="ri-user-line"></i></Link>
             </span>

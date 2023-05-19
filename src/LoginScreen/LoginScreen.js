@@ -1,10 +1,11 @@
 import axios from 'axios';
+import "./loginscreen.css";
 import React, { Component, useEffect, useState } from 'react'
 import { Alert } from 'react-bootstrap';
 import ErrorMessage from '../components/ErrorMessage';
 import Loading from '../components/Loading';
 import { Container, Row, Col } from "reactstrap";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class LoginScreen extends Component{
 constructor(props){
@@ -50,13 +51,13 @@ render(){
 
 
   return (
-    <section>
-        <Container>
-          <Row>
-            <Col lg="6" md="6" sm="12" className="m-auto text-center"></Col>
-    <div>
-    <h1>LOGIN</h1>
-    <form onSubmit={this.handleSubmit}>
+    <div class="row">
+        <div class="col-lg-6 vh-100 d-none d-lg-block">
+      <div class="d-flex align-items-center justify-content-center vh-100">
+      </div>
+    </div>
+    <form onSubmit={this.handleSubmit} class="col-4 mx-auto my-auto">
+        <h3 class="mb-5">Admin Login</h3>
         <div className="mb-3">
         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
         <input type="email" className="form-control" id="InputEmail1"  onChange={(e)=>this.setState({email:e.target.value})} required />
@@ -72,9 +73,6 @@ render(){
                     <button type="submit" className="btn btn-primary">Submit</button>
     </form>
     </div>
-    </Row>
-    </Container>
-    </section>
     )
     }
 }

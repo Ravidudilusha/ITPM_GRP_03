@@ -4,11 +4,8 @@
   line-height: 100px;
 }
 
-.logo {
-  text-align: center;
-}
 .logo img {
-  width: calc(100% - 60%);
+  width: calc(100% - 80%);
   object-fit: contain;
   margin-top: -40px;
 }
@@ -29,11 +26,11 @@
 }
 
 .menu a:hover {
-  color: #df2020;
+  color: #013d99;
 }
 
 .active__menu {
-  color: #df2020 !important;
+  color: #0084ff !important;
 }
 
 .cart__icon i,

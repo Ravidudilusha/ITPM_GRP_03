@@ -8,26 +8,31 @@ import { Link } from 'react-router-dom'
 
 const categoryData = [
     {
-        display:"Stock and Inventory",
+        display:"Donation",
         imgUrl: categoryImg01,
         link:"/get"
         
     },
     {
-        display:"Delivery",
+        display:"Volunteer",
+        imgUrl: categoryImg01,
+        link:"/get"
+        
+    },
+    {
+        display:"Question and answers",
         imgUrl: categoryImg01,
         link:"/update"
         
     },
     {
-        display:"Purchase and Sales",
+        display:"underwater areas ",
         imgUrl: categoryImg01,
         link:"/add"
         
     },
     {
-        display:"Staff",
-        imgUrl: categoryImg01,
+        display:"Articles",
         link:"/edit"
         
     },
