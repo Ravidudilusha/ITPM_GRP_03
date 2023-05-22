@@ -6,35 +6,35 @@ const JWT_SECRET="ravidu1234"
 const jwt=require("jsonwebtoken");
 
 
-const registeradmin=asyncHandler(async(req,res)=>{
-    const {name,email,password}=req.body;
+// const registeradmin=asyncHandler(async(req,res)=>{
+//     const {name,email,password}=req.body;
 
-    const adminExists=await admin.findOne({email});
+//     const adminExists=await admin.findOne({email});
    
-    if(adminExists){
-        res.status(400)
-        throw new Error("admin Already Exists");
-    }
+//     if(adminExists){
+//         res.status(400)
+//         throw new Error("admin Already Exists");
+//     }
 
-    const Admin=await admin.create({
-        name,
-        email,
-        password,
-    });
+//     const Admin=await admin.create({
+//         name,
+//         email,
+//         password,
+//     });
 
-        if(admin){
-            res.status(201).json({
-                _id:Admin._id,
-                name:Admin.name,
-                email:Admin.email,
-                password:Admin.password,
-                token:generateToken(Admin._id),
-            });
-        }else{
-            res.status(400)
-        throw new Error('Error occured!');
-        }
-});
+//         if(admin){
+//             res.status(201).json({
+//                 _id:Admin._id,
+//                 name:Admin.name,
+//                 email:Admin.email,
+//                 password:Admin.password,
+//                 token:generateToken(Admin._id),
+//             });
+//         }else{
+//             res.status(400)
+//         throw new Error('Error occured!');
+//         }
+// });
 const authadmin =asyncHandler(async(req,res)=>{
     const {email,password}=req.body;
 
