@@ -15,10 +15,10 @@ render(){
               <a className="nav-link active" aria-current="page" href="/report">Overview</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/add">Add Staff</a>
+              <a className="nav-link" href="/add">Add Article</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/edit">Edit Staff</a>
+              <a className="nav-link" href="/edit">Edit Aritcle</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="EReport" >Reports</a>

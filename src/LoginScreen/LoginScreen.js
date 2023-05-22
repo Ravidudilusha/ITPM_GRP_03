@@ -40,7 +40,7 @@ handleSubmit(e){
                 alert("Invalid Password");
             }
             if(data.status=="ok"){
-                alert("admin login Successful");
+               // alert("admin login Successful");
             window.localStorage.setItem("token",data.data);
             window.location.href="./Dashboard";
             }

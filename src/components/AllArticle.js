@@ -36,7 +36,7 @@ retrieveArticle(){
 }
 onDelete= (id)=>{
     axios.delete(`http://localhost:8080/delete/${id}`).then((res)=>{
-        alert("Delete Successfully");
+       // alert("Delete Successfully");
         this.retrieveArticle();
     })
 }

@@ -26,11 +26,7 @@ const onSubmit=(e)=> {
 
 })
 
-
 }
-
-
-
 
     return(
         <div className="container">

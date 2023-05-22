@@ -25,7 +25,7 @@ export default function Update(){
       const data = {topic,description,image}
       axios.put(`http://localhost:8080/update/${id}`,data)
       .then((res)=>{
-          alert("Update Successful");  
+         // alert("Update Successful");  
       })
       .catch((err)=>{
           alert("Update Unsuccessful");
