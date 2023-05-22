@@ -55,21 +55,21 @@ const authadmin =asyncHandler(async(req,res)=>{
 
 });
 
-const adminProfile=asyncHandler(async(req,res)=>{
-    const {token}=req.body;
-    try {
-        const admin=jwt.verify(token,JWT_SECRET);
-        console.log(admin);
-        const adminemail=admin.email;
-        admin.findOne({email:adminemail})
-        .then((data)=>{
-            res.send({status:"ok",data:data});
-        }).catch((error)=>{
-            res.send({status:"ok",data:data});
-        });
-    } catch (error) {
+// const adminProfile=asyncHandler(async(req,res)=>{
+//     const {token}=req.body;
+//     try {
+//         const admin=jwt.verify(token,JWT_SECRET);
+//         console.log(admin);
+//         const adminemail=admin.email;
+//         admin.findOne({email:adminemail})
+//         .then((data)=>{
+//             res.send({status:"ok",data:data});
+//         }).catch((error)=>{
+//             res.send({status:"ok",data:data});
+//         });
+//     } catch (error) {
         
-    }
-});
+//     }
+// });
 
 module.exports={registeradmin,authadmin,adminProfile}
