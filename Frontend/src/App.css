@@ -1,0 +1,177 @@
+.App {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 100px 1fr 60px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body .paragraph a {
+  padding: 20px;
+}
+
+body .paragraph .head1 {
+  font-weight: bold;
+  font-size: large;
+}
+
+body .paragraph p {
+  padding: 20px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #00bcd4;
+}
+.container {
+  overflow-y: auto;
+}
+
+.Navbar {
+  background-color: #0081c6;
+  width: 100%;
+  height: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+}
+
+.Footer {
+  background-color: #0081c6;
+  width: 100%;
+  height: 4rem;
+  position: sticky;
+  left: 0%;
+  bottom: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checked {
+  color: orange;
+}
+
+.Navbar .leftSide {
+  flex: 50%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.leftSide button {
+  height: 30px;
+  width: fit-content;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+}
+
+.Navbar .leftSide .links button {
+  text-decoration: none;
+  font-size: 20 px;
+  margin-left: 15px;
+}
+
+.Navbar .leftSide .links {
+  max-height: 80px;
+}
+
+.Navbar .leftSide .links a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 20 px;
+  margin-left: 15px;
+  font-weight: 500;
+}
+
+.Navbar .leftSide .open {
+  display: none;
+  margin-left: 20px;
+}
+
+.Navbar .leftSide #hidden {
+  display: flex;
+}
+
+.Navbar .rightSide {
+  flex: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 25px;
+}
+
+.rightSide input {
+  width: 220px;
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  padding-left: 15px;
+  color: #000;
+}
+
+.rightSide button {
+  height: 32px;
+  width: 70px;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 1025px) {
+  .Navbar .leftSide .links a {
+    font-size: 14px;
+  }
+  .Navbar .leftSide .links button {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 775px) {
+  .Navbar .leftSide .links a {
+    font-size: 12px;
+  }
+  .Navbar .leftSide .links button {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 685px) {
+  .Navbar .leftSide .open {
+    display: flex;
+  }
+  .Navbar .leftSide .links {
+    display: none;
+  }
+  .Navbar .leftSide .button {
+    display: none;
+  }
+
+  .Navbar .leftSide #hidden {
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    height: 300px;
+    max-height: 300px;
+    width: 100%;
+    background-color: #00bcd4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Navbar .leftSide #hidden a {
+    margin: 10px;
+    font-size: 20px;
+  }
+
+  .Navbar .leftSide #hidden button {
+    margin: 10px;
+    font-size: 22px;
+  }
+}
