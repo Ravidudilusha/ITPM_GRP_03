@@ -1,0 +1,6 @@
+.fishArea{
+    padding:2rem 10rem;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column-reverse;
+}

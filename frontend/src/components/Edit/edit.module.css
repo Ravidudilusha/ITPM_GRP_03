@@ -1,0 +1,77 @@
+.bar{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(155, 163, 201);
+    display: flex;
+    justify-content: space-around;
+}
+.title h2{
+
+    margin: 10px;
+}
+.contend{
+    width: 95%;
+    /* background-color: antiquewhite; */
+    margin: auto;
+}
+
+.card{
+   padding: 20px;
+    width: 70%;
+    height: 200px;
+    background-color: rgb(9, 92, 150);
+    display: flex;
+    /* top | right | bottom | left */
+margin: 10px auto 0 auto;
+    border-radius: 20px;
+}
+
+.image{
+    width: 200px;
+    padding: 10px;
+    
+}
+.styleimg{
+    width: 100%;
+    height: 100%;
+}
+.texttile{
+    font-size: 20px;
+    font-weight: bold;
+}
+.text{
+    position: relative;
+}
+.btn{
+    position: absolute;
+    left: 77%;
+    bottom: 0px;
+}
+.edit,.delect,.save,.add{
+    background-color: #4CAF50;
+padding: 5px;
+    text-decoration: none;
+
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 14%;
+}
+.fotterbtn{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer{
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    background-color: #4CAF50;
+
+}
+.empty{
+    height: 60px;
+}

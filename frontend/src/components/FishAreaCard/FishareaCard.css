@@ -1,0 +1,31 @@
+*{
+    margin: 0rem;
+    padding: 0rem;
+}
+.fishAreaCardContainer{
+    display: flex;
+    align-items: center;
+    background-color: RGB(106 203 255);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* color: white; */
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    height: 20rem;
+}
+
+.textContainer{
+    padding:0rem 2rem;
+}
+.textContainer>h1{
+    margin-bottom: 1rem;
+}
+.imgDiv{
+    height: 100%;
+}
+
+.imgDiv>img{
+    width: 20rem;
+    height: 100%;
+    border-radius: 2rem;
+    margin: 0;
+}

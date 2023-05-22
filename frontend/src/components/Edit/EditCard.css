@@ -1,0 +1,30 @@
+.buttons{
+    background-color: rgb(55, 115, 245);
+    font-weight: bold;
+    border-radius: 10px;
+    padding: .5rem 1rem;
+    border:none
+}
+
+.editButton{
+    margin-right: 10px;
+    justify-self: right;
+}
+
+.buttonDiv{
+    display: flex;
+    /* border: 1px solid white; */
+    justify-content: end;
+    margin-top: 0.5rem;
+}
+
+.editCardContainer{
+    display: flex;
+    align-items: center;
+    background-color: RGB(106 203 255);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* color: white; */
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    height: 13rem;
+}

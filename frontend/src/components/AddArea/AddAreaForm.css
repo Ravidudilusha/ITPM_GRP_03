@@ -1,0 +1,57 @@
+.addAreaContainer{
+    padding: 1rem 10rem;
+}
+.addImageDiv {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 0rem 10rem; */
+}
+.inputLable{
+font-size: 1.5rem;
+font-weight: bold;
+color: rgb(50, 50, 50);
+width: 15%;
+}
+.addImageIcon {
+  font-size: 20rem;
+}
+.previewImage{
+    height: 20rem;
+    width: 20rem;
+}
+form {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding: 1rem 5rem;
+  border-radius: 10px;
+  
+}
+.formItem {
+  display: flex;
+  width: 100%;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+.addInput {
+  border: 1px solid rgb(92, 92, 92);
+  padding: 1rem;
+  width: 85%;
+  border-radius: 0.5rem;
+}
+.saveButton{
+    border-radius: 1rem;
+    padding: 1rem 4rem;
+    border: none;
+    background-color: rgb(53, 120, 254);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.imageInputDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

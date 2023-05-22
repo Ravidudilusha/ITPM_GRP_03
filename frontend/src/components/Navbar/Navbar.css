@@ -1,0 +1,54 @@
+p{
+   
+}
+.navContainer{
+    background-color: rgb(58, 58, 255);
+    color: white;
+    padding: 1rem 10rem;
+    
+    font-size: 2rem;
+
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navItems{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+.navItems >p{
+    margin: 0px;
+    padding: 0px;
+margin-left: 1rem;
+}
+
+.activeNavItem{
+    background-color: rgb(0, 255, 255);
+    padding: 1rem;
+}
+.searchDiv{
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+position: relative;
+    padding-top: 1rem;
+    /* border: 1px solid red; */
+}
+.searchInput{
+    padding: .7rem .9rem;
+    width: 50%;
+    border-radius: 10rem;
+    border: none;
+    font-size: 1.5rem;
+}
+.searchIcon{
+position: absolute;
+color: rgb(50, 156, 255);
+top: 1.6rem;
+right: 19rem;
+}
